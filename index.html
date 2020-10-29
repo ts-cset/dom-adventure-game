@@ -2,22 +2,49 @@
 <html>
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=0" />
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=0"/>
 
 	<title>DOM Adventure Game</title>
 
-	<link rel="stylesheet" href="assets/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/style.css" type="text/css"/>
 </head>
 
 <body>
+	<h2>THE INTERROGATION</h2>
 	<main id="game">
-		<!--
-        You have two options:
-        1. Write HTML within this <main> element and manipulate it in the JS
-        2. Or handle everything within the JS
-      -->
+		<!-- written scene -->
 	</main>
+
+		<form action="" method="get" class="game-choices">
+			<!-- player name -->
+			<div class="form-section">
+				<input id="player-name"
+					type="text"
+					value=""
+					placeholder="ENTER YOUR NAME"
+					/>
+				<button class="start-game">start</button>
+			</div>
+
+			<!-- game choices -->
+				<fieldset class="radio-form-section">
+					<legend>Make your choice:</legend>
+					<input id="choice-1" type="radio" checked/>
+					<label for="choice-1" class="radio-label"> choice 1</label>
+
+					<input id="choice-2" type="radio"/>
+					<label for="choice-2" class="radio-label">choice 2</label>
+
+					<input id="choice-3" type="radio"/>
+					<label for="choice-3" class="radio-label">choice 3</label>
+				</fieldset>
+
+			<!-- continue button -->
+			<div class="form-section">
+				<button class="continue">continue</button>
+			</div>
+		</form>
 
 	<script src="assets/main.js"></script>
 </body>

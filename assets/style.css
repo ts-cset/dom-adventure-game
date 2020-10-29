@@ -1,3 +1,5 @@
+/* Mobile first! */
+
 *, *:after, *:before {
     box-sizing: border-box;
 }
@@ -8,15 +10,92 @@ html {
 
 body {
     align-items: center;
-    background: #343434;
-    color: #fefefe;
+    background: #464646; /* dark grey */
+    color: turquoise;
     display: flex;
+	flex-direction: column;
     font-family: Helvetica, Arial, sans-serif;
     justify-content: center;
     line-height: 140%;
     min-height: 100vh;
 }
 
+h2 {
+	display: flex;
+}
+
 main {
+	display: flex;
+	background-color: #2A2A2A; /* very dark grey */
     font-size: 2rem;
 }
+
+#game {
+	display: flex;
+	color: turquoise;
+	margin-bottom: 2.5%;
+	padding: 5%;
+	width: 80%;
+	border: 2px solid turquoise;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-section {
+	display: flex;
+	height: 10%;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+.form-section input[type="text"] {
+	display: flex;
+	font-size: 1.1em;
+	background-color: #2A2A2A;
+	color: turquoise;
+	border: 1px solid turquoise;
+}
+
+.radio-form-section { /* "Legacy" is used in the name because this is something that isn't supported by flexbox. We want to keep it separate from other flex things. */
+	border: none;
+	margin-bottom: 40px;
+}
+
+.radio-form-section legend {
+	padding: 10px;
+}
+
+.radio-form-section .radio-label {
+	display: block;
+	padding: 0 20px 0 10px;
+}
+
+.radio-form-section input[type="radio"] {
+	margin: 8px;
+}
+
+.radio-form-section .radio-label,
+.radio-form-section input[type="radio"] {
+	float: left; /* Float is used because radio buttons aren't supported by flexbox (yet) */
+}
+
+.form-section button {
+	display: flex;
+	font-size: 1em;
+	width: auto;
+	height: auto;
+	justify-content: center;
+	background-color: #007171;
+	text-transform: uppercase;
+	margin-top: 2%;
+	border: 2px solid turquoise;
+	color: turquoise;
+}
+
+
+/* Desktop layout */

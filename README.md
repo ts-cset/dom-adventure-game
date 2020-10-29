@@ -9,13 +9,13 @@ When we first learned JavaScript, we made a text-based game to practice the basi
 
 1. Click the *Fork* button in the top right to make your own copy of the repository.
 2. On your own repo, click the green *Code* button and copy the repo's git URL. It should have *your GitHub username* in it.
-3. Open your terminal and navigate to your folder for projects: `cd ~/code`
-4. Use git to download your repo using the copied URL: `git clone <URL>`
+3. Open your terminal and navigate to your folder for projects: "cd ~/code"
+4. Use git to download your repo using the copied URL: "git clone <URL>"
 
 To submit the project:
 
 1. As you are working, use the Edit-Add-Commit workflow to track your changes with git.
-2. When you are done, you can push all the commits to GitHub at once with the `git push` command.
+2. When you are done, you can push all the commits to GitHub at once with the "git push" command.
 
 
 ## Requirements
@@ -37,4 +37,3 @@ Make sure you [follow the original requirements](https://ts-cset.github.io/cset-
 - *5 pts* for a game that runs without errors.
 - *5 pts* for well commented code.
 - *5 pts* for following code style guidelines.
-

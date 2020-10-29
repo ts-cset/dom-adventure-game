@@ -1,23 +1,22 @@
 *, *:after, *:before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 body {
-  align-items: center;
-  background: #343434;
-  color: #fefefe;
-  display: flex;
-  font-family: Helvetica, Arial, sans-serif;
-  justify-content: center;
-  line-height: 140%;
-  min-height: 100vh;
+    align-items: center;
+    background: #343434;
+    color: #fefefe;
+    display: flex;
+    font-family: Helvetica, Arial, sans-serif;
+    justify-content: center;
+    line-height: 140%;
+    min-height: 100vh;
 }
 
 main {
-  font-size: 2rem;
+    font-size: 2rem;
 }
-

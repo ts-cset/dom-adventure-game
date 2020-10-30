@@ -32,7 +32,9 @@ main {
 
 #game {
 	display: flex;
-	color: turquoise;
+	flex-direction: column;
+	color: #ADFFFC; /* pale turquoise */
+	font-size: 1em;
 	margin-bottom: 2.5%;
 	padding: 5%;
 	width: 80%;
@@ -64,6 +66,7 @@ form {
 .radio-form-section { /* "Legacy" is used in the name because this is something that isn't supported by flexbox. We want to keep it separate from other flex things. */
 	border: none;
 	margin-bottom: 40px;
+	visibility: hidden;
 }
 
 .radio-form-section legend {
@@ -97,5 +100,8 @@ form {
 	color: turquoise;
 }
 
+.continue {
+	visibility: hidden;
+}
 
 /* Desktop layout */

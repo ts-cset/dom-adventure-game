@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=0"/>
 
 	<title>DOM Adventure Game</title>
 
@@ -18,11 +18,12 @@
 
 		<form action="" method="get" class="game-choices">
 			<!-- player name -->
-			<div class="form-section">
+			<div class="form-section" id="starting-up">
 				<input id="player-name"
 					type="text"
 					value=""
 					placeholder="ENTER YOUR NAME"
+					required
 					/>
 				<button class="start-game">start</button>
 			</div>
@@ -30,13 +31,13 @@
 			<!-- game choices -->
 				<fieldset class="radio-form-section">
 					<legend>Make your choice:</legend>
-					<input id="choice-1" type="radio" checked/>
+					<input id="choice-1" type="radio" value="1" checked/>
 					<label for="choice-1" class="radio-label"> choice 1</label>
 
-					<input id="choice-2" type="radio"/>
+					<input id="choice-2" type="radio" value="2"/>
 					<label for="choice-2" class="radio-label">choice 2</label>
 
-					<input id="choice-3" type="radio"/>
+					<input id="choice-3" type="radio" value="3"/>
 					<label for="choice-3" class="radio-label">choice 3</label>
 				</fieldset>
 

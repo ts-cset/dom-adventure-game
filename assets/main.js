@@ -1,4 +1,4 @@
-
+document.getElementById("game");
 // If the player dies, show this scene
 const death = function(cause) {
   // Print their cause of death, and then a final message
@@ -124,7 +124,7 @@ const Start = function() {
   console.log("There are three doors");
 
   // Ask for input
-  const choice = prompt("Which door do you choose?");
+  const choice = document.getElementById("door");
 
   // Create branches for each choice
   if (choice === "first") {

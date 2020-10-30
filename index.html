@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,17 +10,19 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
   </head>
   <body>
-    <main id="game">
-<div class= scene1>
-  <p> You awake in a dimly lit room.</p>
-  <p> There are three doors</p>
-  <form>
-    <label>Which door would you choose?</label>
-  <input type="text" id="door" name="Door">
-</form>
-</div>
-    </main>
+    <h1>DOM Adventure Game</h1>
+    <div class=scene1>
+      <p>"You awake in a dimly lit room.</p>
+          <p>There are three doors.</p>
+          <p>which one would you choose?</p>
+          <button onclick="bearRoom()">First Door</button>
+<p id="bear"></p>
 
-    <script src="assets/main.js"></script>
+    </div>
+    <script>
+    function bearRoom() {
+    document.getElementById("bear").innerHTML = "There is a bear in here!!!!It's sitting in front of another door eating from a pot of honey.How are you going to move the bear"
+  }
+    </script>
   </body>
 </html>

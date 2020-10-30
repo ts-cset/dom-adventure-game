@@ -1,22 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=0" />
-
-    <title>DOM Adventure Game</title>
-
-    <link rel="stylesheet" href="assets/style.css" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-    <main id="game">
-      <!-- 
-        You have two options:
-        1. Write HTML within this <main> element and manipulate it in the JS
-        2. Or handle everything within the JS
-      -->
-    </main>
+<body>
 
-    <script src="assets/main.js"></script>
-  </body>
+<br><br> <button onclick="myFunction()">-->Start<--</button> <br><br>
+
+<ul id="myList">
+  <li>
+  </li> <br> 
+
+<button onclick="myFunction1()" id="left">----Left----</button>
+<button onclick="myFunction2()" id="right">---Right---</button>
+<button onclick="myFunction5()" id="leftleft" style="display:none;">Eat the honey since you are starving</button>
+<button onclick="myFunction6()" id="leftright" style="display:none;">Kick The Bear In The Head</button> 
+<input id = "form()" style="display:none;"></input>
+<br><br>
+<button onclick="myFunction4()">Restart</button> 
+
+
+<script>
+
+function form() {
+  
+}
+
+function myFunction1() {
+  var textnode = document.createTextNode("There is a bear in here. It's sitting in front of another door eating from a pot of honey. How are you going to move the bear?");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+  document.getElementById("left").style.display = "none";
+  document.getElementById("right").style.display = "none";
+  document.getElementById("leftleft").style.display = "inline-block";
+  document.getElementById("leftright").style.display = "inline-block";
+}
+
+function myFunction2() {
+  var textnode = document.createTextNode("The door swings open to utter darkness. You step through, but your foot can't find the floor. It's a big pit. And you're falling. AAAAAAAAHHHHHHHHHhhhhhhhhhhhh.....    You Died. Click Restart to try again.");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+  document.getElementById("left").style.display = "none";
+  document.getElementById("right").style.display = "none";
+}
+
+// When next scene is pressed -- replace previous createTextNode with new text -- 
+function myFunction5() {
+    var textnode = document.createTextNode("Bad call. The angry bear slaps your face off. You Die Instantly. -- Press Restart to try again");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+  document.getElementById("leftleft").style.display = "none";
+  document.getElementById("leftright").style.display = "none";
+}
+
+function myFunction6() {
+    var textnode = document.createTextNode("The bear moved, you can go through the door now.");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+  document.getElementById("leftleft").style.display = "none";
+  document.getElementById("leftright").style.display = "none";
+}
+
+function myFunction4() {
+  var textnode = document.createTextNode("-- You awake in a dimly lit room. -- -- There are doors to your left and right. -- -- Which door do you pick? --");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+  document.getElementById("left").style.display = "inline-block";
+  document.getElementById("right").style.display = "inline-block";
+  document.getElementById("leftleft").style.display = "none";
+  document.getElementById("leftright").style.display = "none";
+}
+
+function myFunction() {
+  var textnode = document.createTextNode("-- You awake in a dimly lit room. -- -- There are doors to your left and right. -- -- Which door do you pick? --");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+}
+
+
+</script>
+
+</body>
 </html>

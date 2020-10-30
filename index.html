@@ -17,12 +17,23 @@
           <p>which one would you choose?</p>
           <button onclick="bearRoom()">First Door</button>
 <p id="bear"></p>
+<button onclick="pitTrap()"> Second door</button>
+<p id="trap"</p>
+  <button onclick="killer()"> Third door</button>
+  <p id="kill"></p>
 
     </div>
     <script>
     function bearRoom() {
     document.getElementById("bear").innerHTML = "There is a bear in here!!!!It's sitting in front of another door eating from a pot of honey.How are you going to move the bear"
   }
+  function pitTrap(){
+    document.getElementById("trap").innerHTML = "The door swings open to utter darkness.You step through, but your foot can't find the floor.It's a big pit. And you're falling AAAAAAAAHHHHHHHHHhhhhhhhhhhhh....."
+  }
+  function killer(){
+    document.getElementById("kill").innerHTML = "You stumble around the room for days and die of starvation"
+  }
+
     </script>
   </body>
 </html>

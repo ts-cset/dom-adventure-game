@@ -19,11 +19,19 @@ body {
   min-height: 100vh;
 }
 h1{
-
+margin-right: 10px;
 }
 main {
   font-size: 2rem;
 }
-button{
-
+button {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background-color: red;
+  cursor: pointer;
 }

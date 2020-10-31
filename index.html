@@ -29,22 +29,29 @@
 			</div>
 
 			<!-- game choices -->
-				<fieldset class="radio-form-section">
-					<legend>Make your choice:</legend>
-					<input id="choice-1" type="radio" value="1" checked/>
-					<label for="choice-1" class="radio-label"> choice 1</label>
+				<!-- Make all the buttons, but keep them invisible until you need them! -->
+			<div id="game-buttons">
 
-					<input id="choice-2" type="radio" value="2"/>
-					<label for="choice-2" class="radio-label">choice 2</label>
+				<button id="ask">"What's going on?"</button>
+				<button id="no-one">"No one sent me."</button>
+				<button id="silent">Stay silent.</button>
 
-					<input id="choice-3" type="radio" value="3"/>
-					<label for="choice-3" class="radio-label">choice 3</label>
-				</fieldset>
+				<!-- "No one sent me." = REVEAL -->
+				<!-- "I don't know what you're talking about." = extra text + REVEAL -->
 
-			<!-- continue button -->
-			<div class="form-section">
-				<button class="continue">continue</button>
+				<!-- "Yes." = GET SHOT -->
+
+				<button id="tell-me">"Tell me what's going on."</button>
+				<!--"Where?" = REVEAL -->
+
+				<button id="type">"My... type?"</button>
+
+				<button id="reveal">text goes here</button>
+				<button id="get-shot">text goes here</button>
+
 			</div>
+
+
 		</form>
 
 	<script src="assets/main.js"></script>

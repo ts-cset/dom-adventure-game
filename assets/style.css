@@ -63,31 +63,14 @@ form {
 	border: 1px solid turquoise;
 }
 
-.radio-form-section { /* "Legacy" is used in the name because this is something that isn't supported by flexbox. We want to keep it separate from other flex things. */
-	border: none;
-	margin-bottom: 40px;
-	visibility: hidden;
+button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.radio-form-section legend {
-	padding: 10px;
-}
 
-.radio-form-section .radio-label {
-	display: block;
-	padding: 0 20px 0 10px;
-}
-
-.radio-form-section input[type="radio"] {
-	margin: 8px;
-}
-
-.radio-form-section .radio-label,
-.radio-form-section input[type="radio"] {
-	float: left; /* Float is used because radio buttons aren't supported by flexbox (yet) */
-}
-
-.form-section button {
+button.start-game {
 	display: flex;
 	font-size: 1em;
 	width: auto;
@@ -100,8 +83,8 @@ form {
 	color: turquoise;
 }
 
-.continue {
-	visibility: hidden;
+.game-buttons button {
+	/* Add some cool styles here */
 }
 
 /* Desktop layout */

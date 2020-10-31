@@ -1,4 +1,6 @@
 *, *:after, *:before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -7,8 +9,8 @@ html {
 }
 
 body {
+  background-image: url("darkroom.jpg");
   align-items: center;
-  background: #343434;
   color: #fefefe;
   display: flex;
   font-family: Helvetica, Arial, sans-serif;
@@ -16,8 +18,12 @@ body {
   line-height: 140%;
   min-height: 100vh;
 }
+h1{
 
+}
 main {
   font-size: 2rem;
 }
+button{
 
+}

@@ -18,16 +18,14 @@
 <button onclick="myFunction2()" id="right">---Right---</button>
 <button onclick="myFunction5()" id="leftleft" style="display:none;">Eat the honey since you are starving</button>
 <button onclick="myFunction6()" id="leftright" style="display:none;">Kick The Bear In The Head</button> 
-<input id = "form()" style="display:none;"></input>
+<input id = "form" style="display:none;"></input>
+<button onclick="formTwo()" id="formTwo" style="display:none;">Enter</button>
 <br><br>
 <button onclick="myFunction4()">Restart</button> 
 
 
 <script>
 
-function form() {
-  
-}
 
 function myFunction1() {
   var textnode = document.createTextNode("There is a bear in here. It's sitting in front of another door eating from a pot of honey. How are you going to move the bear?");
@@ -37,7 +35,11 @@ function myFunction1() {
   document.getElementById("right").style.display = "none";
   document.getElementById("leftleft").style.display = "inline-block";
   document.getElementById("leftright").style.display = "inline-block";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("formTwo").style.display = "none";
 }
+
+
 
 function myFunction2() {
   var textnode = document.createTextNode("The door swings open to utter darkness. You step through, but your foot can't find the floor. It's a big pit. And you're falling. AAAAAAAAHHHHHHHHHhhhhhhhhhhhh.....    You Died. Click Restart to try again.");
@@ -45,6 +47,8 @@ function myFunction2() {
   item.replaceChild(textnode, item.childNodes[0]);
   document.getElementById("left").style.display = "none";
   document.getElementById("right").style.display = "none";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("formTwo").style.display = "none";
 }
 
 // When next scene is pressed -- replace previous createTextNode with new text -- 
@@ -54,14 +58,18 @@ function myFunction5() {
   item.replaceChild(textnode, item.childNodes[0]);
   document.getElementById("leftleft").style.display = "none";
   document.getElementById("leftright").style.display = "none";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("formTwo").style.display = "none";
 }
 
 function myFunction6() {
-    var textnode = document.createTextNode("The bear moved, you can go through the door now.");
+    var textnode = document.createTextNode("The bear moved, and you enter the door to find yourself standing amidst a room full of treasure. How much do you take?");
   var item = document.getElementById("myList").childNodes[1];
   item.replaceChild(textnode, item.childNodes[0]);
   document.getElementById("leftleft").style.display = "none";
   document.getElementById("leftright").style.display = "none";
+  document.getElementById("form").style.display = "inline-block";
+  document.getElementById("formTwo").style.display = "inline-block";
 }
 
 function myFunction4() {
@@ -72,14 +80,27 @@ function myFunction4() {
   document.getElementById("right").style.display = "inline-block";
   document.getElementById("leftleft").style.display = "none";
   document.getElementById("leftright").style.display = "none";
+  document.getElementById("form").style.display = "none";
+  document.getElementById("formTwo").style.display = "none";
 }
 
 function myFunction() {
   var textnode = document.createTextNode("-- You awake in a dimly lit room. -- -- There are doors to your left and right. -- -- Which door do you pick? --");
   var item = document.getElementById("myList").childNodes[1];
   item.replaceChild(textnode, item.childNodes[0]);
+    document.getElementById("formTwo").style.display = "none";
 }
 
+function formTwo() {
+  const choice = document.getElementById("formTwo").value;
+  if(Number.isNaN(choice))
+
+  if (choice > 100) {
+      var textnode = document.createTextNode("newtext");
+  var item = document.getElementById("myList").childNodes[1];
+  item.replaceChild(textnode, item.childNodes[0]);
+    document.getElementById("formTwo").style.display = "none"; }
+}
 
 </script>
 

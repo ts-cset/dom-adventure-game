@@ -85,6 +85,8 @@ button.start-game {
 
 .game-buttons button {
 	/* Add some cool styles here */
+	display: flex;
+	visibility: hidden;
 }
 
 /* Desktop layout */

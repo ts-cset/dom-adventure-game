@@ -18,7 +18,6 @@ let typeButton = document.querySelector("#type");
 let getShotButton = document.querySelector("#get-shot");
 let revealButton = document.querySelector("#reveal");
 
-
 game.innerHTML = `
 	<p>Welcome to The Interrogation.</p>
 

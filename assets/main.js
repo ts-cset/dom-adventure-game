@@ -15,6 +15,7 @@ const rightB = document.querySelector('.rightB');
 const room2A = document.querySelector('.room2A');
 const room2B = document.querySelector('.room2B');
 
+
 room1.textContent = 'This is the first room. Would you like to go left or right?';
 
 function left() {
@@ -30,9 +31,6 @@ function left() {
     leftP.remove();
     room2A.textContent = 'BYE';
   }
-
-
-
 }
 
 function right() {
@@ -40,13 +38,14 @@ function right() {
   leftB.remove();
   rightB.remove();
 
-  rightP.textContent = "Press e to go to the next room";
+  rightP.textContent = "Enter e to go to the next room";
 
   document.addEventListener('keypress', newRoom);
 
   function newRoom(e) {
     rightP.remove();
-    room2B.textContent = 'HI';
+    room2B.textContent = "HI";
+
   }
 
 }

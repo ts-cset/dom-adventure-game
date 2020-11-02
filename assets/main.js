@@ -12,6 +12,9 @@ const rightP = document.querySelector('.rightP');
 const leftB = document.querySelector('.leftB');
 const rightB = document.querySelector('.rightB');
 
+const room2A = document.querySelector('.room2A');
+const room2B = document.querySelector('.room2B');
+
 room1.textContent = 'This is the first room. Would you like to go left or right?';
 
 function left() {
@@ -19,7 +22,16 @@ function left() {
   leftB.remove();
   rightB.remove();
 
-  leftP.textContent = "HI";
+  leftP.textContent = "Press l to got to the next room";
+
+  document.addEventListener('keypress', newRoom);
+
+  function newRoom(l) {
+    leftP.remove();
+    room2A.textContent = 'BYE';
+  }
+
+
 
 }
 
@@ -28,6 +40,13 @@ function right() {
   leftB.remove();
   rightB.remove();
 
-  rightP.textContent = "BYE";
+  rightP.textContent = "Press e to go to the next room";
+
+  document.addEventListener('keypress', newRoom);
+
+  function newRoom(e) {
+    rightP.remove();
+    room2B.textContent = 'HI';
+  }
 
 }

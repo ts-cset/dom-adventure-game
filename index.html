@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
   </head>
   <body>
-    <main id="game">
+    <main class="game">
 
-      <p id = "room-1">
-        This is the first room. would you like to go left or right?
-        <button type="button" id = "left">LEFT</button>
-        <button type="button" id = "right">RIGHT</button>
+      <p class = "room1"></p>
 
-      </p>
+      <button onclick="left()" class = "leftB">LEFT</button>
+      <p class = "leftP"></p>
+
+      <button onclick="right()" class = "rightB">RIGHT</button>
+      <p class ="rightP"></p>
+
+
 
     </main>
+
 
 
     <script src="assets/main.js"></script>

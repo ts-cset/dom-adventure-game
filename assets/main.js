@@ -1,3 +1,6 @@
+
+
+
 document.getElementById("game");
 // If the player dies, show this scene
 const death = function(cause) {

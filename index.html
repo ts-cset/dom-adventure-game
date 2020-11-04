@@ -15,16 +15,24 @@
       <p>"You awake in a dimly lit room.</p>
           <p>There are three doors.</p>
           <p>which one would you choose?</p>
-          <button onclick="bearRoom()">First Door</button>
+          <button id="roomBear" onclick="bearRoom()">First Door</button>
 <p id="bear"></p>
-<button onclick="pitTrap()"> Second door</button>
+</div>
+<div class=scene2>
+<button id="pit" onclick="pitTrap()"> Second door</button>
 <p id="trap"</p>
-  <button onclick="killer()"> Third door</button>
+</div>
+<div class=scene3>
+  <button id="killerRoom" onclick="killer()"> Third door</button>
   <p id="kill"></p>
+</div>
 
-    </div>
     <script>
     function bearRoom() {
+    let scene2 = document.querySelector(".scene2");
+    scene2.innerHTML = ""
+    let scene3 = document.querySelector(".scene3");
+    scene3.remove();
     document.getElementById("bear").innerHTML = "There is a bear in here!!!!It's sitting in front of another door eating from a pot of honey.How are you going to move the bear?"
 let input= document.createElement("input");
 input.type="text";

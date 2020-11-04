@@ -83,10 +83,11 @@ button.start-game {
 	color: turquoise;
 }
 
-.game-buttons button {
+.game-buttons {
 	/* Add some cool styles here */
 	display: flex;
-	visibility: hidden;
+	flex-direction: column;
+	height: auto;
 }
 
 /* Desktop layout */

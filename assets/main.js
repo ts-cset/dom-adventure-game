@@ -7,7 +7,7 @@ let game = document.querySelector("#game");
 let startingUp = document.querySelector("#starting-up");
 let nameInput = document.querySelector("#player-name");
 let startButton = document.querySelector("button.start-game");
-let gameButtons = document.querySelector(".game-buttons");
+let gameButtons = document.querySelector("#game-buttons");
 
 // the billion buttons
 let askButton = document.querySelector("#ask");
@@ -78,6 +78,12 @@ function noOne() {
 	getShotButton.innerHTML = "Yes.";
 	getShotButton.style.visibility = "visible";
 	tellMeButton.style.visibility = "visible";
+	askButton.style.visibilty = "hidden";
+	noOneButton.style.visibility = "hidden";
+	silentButton.style.visibilty = "hidden";
+	typeButton.style.visibilty = "hidden";
+	revealButton.style.visibility = "hidden";
+
 	game.innerHTML = `
 	<p>"Am I supposed to believe you came of your own volition?" The man narrows his eyes. "No instructions, no overseer, no purpose?" He leans forward, forcing you to hold his gaze.</p>
 	`;
@@ -87,6 +93,11 @@ function silent() {
 	event.preventDefault();
 	silentButton.style.visibility = "hidden";
 	typeButton.style.visibility = "visible";
+	getShotButton.style.visibility = "hidden";
+	tellMeButton.style.visibility = "hidden";
+	askButton.style.visibility = "hidden";
+	noOneButton.style.visibility = "hidden";
+	revealButton.style.visibility = "hidden";
 	game.innerHTML = `
 	<p>The man watches you, and the more he stares, the more uncomfortable it becomes. His eyes bore holes into your skull, and it almost hurts to hold his gaze, but you do it anyway.</p>
 
@@ -102,6 +113,12 @@ function tellMe() {
 	event.preventDefault();
 	revealButton.innerHTML = `"Where?"`;
 	revealButton.style.visibility = "visible";
+	getShotButton.style.visibility = "hidden";
+	tellMeButton.style.visibility = "hidden";
+	askButton.style.visibilty = "hidden";
+	noOneButton.style.visibility = "hidden";
+	silentButton.style.visibilty = "hidden";
+	typeButton.style.visibilty = "hidden";
 	game.innerHTML = `
 	<p>The man's eyebrows shoot up, and he gives a surprised bark of a laugh. "Really?" He's grinning.</p>
 
@@ -117,6 +134,18 @@ function tellMe() {
 
 function reveal() {
 	event.preventDefault();
+	revealButton.style.visibility = "hidden";
+	getShotButton.style.visibility = "hidden";
+	tellMeButton.style.visibility = "hidden";
+	askButton.style.visibilty = "hidden";
+	noOneButton.style.visibility = "hidden";
+	silentButton.style.visibilty = "hidden";
+	typeButton.style.visibilty = "hidden";
+	let restart = document.createElement("input");
+	restart.type = "submit";
+	restart.style.visibility = "visible";
+	restart.value = "Restart?"
+	gameButtons.appendChild(restart);
 	game.innerHTML = `
 	<p>The man does not respond. Instead, he pulls out a tablet. Hits play on a video.</p>
 
@@ -140,6 +169,18 @@ function reveal() {
 
 function myType() {
 	event.preventDefault();
+	revealButton.style.visibility = "hidden";
+	getShotButton.style.visibility = "hidden";
+	tellMeButton.style.visibility = "hidden";
+	askButton.style.visibilty = "hidden";
+	noOneButton.style.visibility = "hidden";
+	silentButton.style.visibilty = "hidden";
+	typeButton.style.visibilty = "hidden";
+	let restart = document.createElement("input");
+	restart.type = "submit";
+	restart.value = "Restart?";
+	restart.style.visibility = "visible";
+	gameButtons.appendChild(restart);
 	game.innerHTML() = `
 	<p>The man crosses his arms over his chest. "I've dealt with a lot of you before. Acting confused. Saying they don't remember what happened." His smirk widens. "Insisting they're the wrong person."</p>
 
@@ -153,10 +194,23 @@ function myType() {
 
 	<p>END</p>
 	`;
-}
+};
 
 function getShot() {
 	event.preventDefault();
+	revealButton.style.visibility = "hidden";
+	getShotButton.style.visibility = "hidden";
+	tellMeButton.style.visibility = "hidden";
+	askButton.style.visibilty = "hidden";
+	noOneButton.style.visibility = "hidden";
+	silentButton.style.visibilty = "hidden";
+	typeButton.style.visibilty = "hidden";
+	let restart = document.createElement("input");
+	restart.type = "submit";
+	restart.style.visibility = "visible";
+	restart.value = "Restart?"
+	gameButtons.appendChild(restart);
+
 	game.innerHTML = `
 	<p>The man does not respond. His glare hardens into ice. It's almost like the room itself has gotten colder.</p>
 

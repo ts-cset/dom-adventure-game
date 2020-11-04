@@ -83,7 +83,7 @@ button.start-game {
 	color: turquoise;
 }
 
-.game-buttons button {
+#game-buttons button {
 	/* Add some cool styles here */
 	display: flex;
 	visibility: hidden;

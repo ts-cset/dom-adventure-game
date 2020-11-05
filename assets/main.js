@@ -117,6 +117,7 @@ function tellMe() {
 
 function reveal() {
 	event.preventDefault();
+	game.style.color = "red";
 	game.innerHTML = `
 	<p>The man does not respond. Instead, he pulls out a tablet. Hits play on a video.</p>
 
@@ -140,6 +141,7 @@ function reveal() {
 
 function myType() {
 	event.preventDefault();
+	game.style.color = "red";
 	game.innerHTML() = `
 	<p>The man crosses his arms over his chest. "I've dealt with a lot of you before. Acting confused. Saying they don't remember what happened." His smirk widens. "Insisting they're the wrong person."</p>
 
@@ -157,6 +159,7 @@ function myType() {
 
 function getShot() {
 	event.preventDefault();
+	game.style.color = "red";
 	game.innerHTML = `
 	<p>The man does not respond. His glare hardens into ice. It's almost like the room itself has gotten colder.</p>
 

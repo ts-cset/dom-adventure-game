@@ -230,8 +230,6 @@ function setUsername() {
 	}
 };
 
-
-
 startButton.addEventListener("click", setUsername);
 askButton.addEventListener("click", ask);
 noOneButton1.addEventListener("click", noOne);

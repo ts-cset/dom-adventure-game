@@ -13,12 +13,15 @@
 <body>
 	<h2>THE INTERROGATION</h2>
 	<main id="game">
-		<!-- written scene -->
+		<p>Welcome to The Interrogation.</p>
+
+		<p>The choices you make in this game determine the outcome. You are given multiple choices on how to proceed. You can only choose one.</p>
+
+		<p>Select your path by clicking on its associated button.</p>
 	</main>
 
-		<form action="" method="get" class="game-choices">
+		<form action="" method="get" class="game-choices" id="starting-up">
 			<!-- player name -->
-			<div class="form-section" id="starting-up">
 				<input id="player-name"
 					type="text"
 					value=""
@@ -26,16 +29,27 @@
 					required
 					/>
 				<button class="start-game">start</button>
-			</div>
+		</form>
 
 			<!-- game choices -->
 				<!-- Make all the buttons, but keep them invisible until you need them! -->
 			<div class="game-buttons">
-				<!-- buttons will be here -->
+				<button id="ask">"What's going on?"</button>
+				<button id="no-one1">"No one sent me."</button>
+				<button id="silent">Stay silent.</button>
+
+				<button id="reveal1">"I don't know what you're talking about!"</button>
+				<button id="no-one2">"No one sent me."</button>
+
+				<button id="type">"My... <em>type?"</em></button>
+
+				<button id="get-shot">"Yes."</button>
+				<button id="tell-me">"Tell me what's going on."</button>
+
+				<button id="reveal2">"Where?"</button>
 			</div>
 
-
-		</form>
+		<!--</form>-->
 
 	<script src="assets/main.js"></script>
 </body>

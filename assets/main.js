@@ -10,15 +10,16 @@ let startButton = document.querySelector("button.start-game");
 let gameButtons = document.querySelector(".game-buttons");
 
 // the billion buttons
-/*
 let askButton = document.querySelector("#ask");
-let noOneButton = document.querySelector("#no-one");
+let noOneButton1 = document.querySelector("#no-one1");
+let noOneButton2 = document.querySelector("#no-one2");
 let silentButton = document.querySelector("#silent");
 let tellMeButton = document.querySelector("#tell-me");
 let typeButton = document.querySelector("#type");
 let getShotButton = document.querySelector("#get-shot");
-let revealButton = document.querySelector("#reveal");
-*/
+let revealButton1 = document.querySelector("#reveal1");
+let revealButton2 = document.querySelector("#reveal2");
+
 
 game.innerHTML = `
 	<p>Welcome to The Interrogation.</p>
@@ -43,16 +44,11 @@ function startGame() {
 
 	<p>"Who sent you?" he asks.</p>
 	`;
-	startingUp.remove("#player-name", ".start-game");
-	let askButton = document.createElement("BUTTON");
-	askButton.innerHTML = `"What's going on?"`;
-	gameButtons.appendChild(askButton);
-	let noOneButton = document.createElement("BUTTON");
-	noOneButton.innerHTML = `"No one sent me."`;
-	gameButtons.appendChild(noOneButton);
-	let silentButton = document.createElement("BUTTON");
-	silentButton.innerHTML = `Stay silent.`;
-	gameButtons.appendChild(silentButton);
+	startingUp.remove();
+
+	askButton.style.visibility = "visible";
+	noOneButton1.style.visibility = "visible";
+	silentButton.style.visibility = "visible";
 }
 
 function ask() {
@@ -69,23 +65,37 @@ function ask() {
 
 	<p>A sharp stab of pain lances through your head, and you wince, but it's gone as soon as it arrives.</p>
 	`;
-	gameButtons.remove(askButton, silentButton);
-	let revealButton = document.createElement("BUTTON");
-	revealButton.innerHTML = `"I don't know what you're talking about."`;
-	gameButtons.appendChild(revealButton);
-	askButton.addEventListener("click", ask);
-	noOneButton.addEventListener("click", noOne);
-	silentButton.addEventListener("click", silent);
+
+	askButton.remove();
+	silentButton.remove();
+	noOneButton1.remove();
+	revealButton1.style.visibility = "visible";
+	noOneButton2.style.visibility = "visible";
 }
 
 
 function noOne() {
+	noOneButton1.remove();
+	noOneButton2.remove();
+	revealButton1.remove();
+	silentButton.remove();
+	askButton.remove();
+
+	getShotButton.style.visibility = "visible";
+	tellMeButton.style.visibility = "visible";
+
 	game.innerHTML = `
 	<p>"Am I supposed to believe you came of your own volition?" The man narrows his eyes. "No instructions, no overseer, no purpose?" He leans forward, forcing you to hold his gaze.</p>
 	`;
 }
 
 function silent() {
+	silentButton.remove();
+	askButton.remove();
+	noOneButton1.remove();
+
+	typeButton.style.visibility = "visible";
+
 	game.innerHTML = `
 	<p>The man watches you, and the more he stares, the more uncomfortable it becomes. His eyes bore holes into your skull, and it almost hurts to hold his gaze, but you do it anyway.</p>
 
@@ -98,7 +108,10 @@ function silent() {
 }
 
 function tellMe() {
-	//revealButton.innerHTML = `"Where?"`;
+	tellMeButton.remove();
+	getShotButton.remove();
+	revealButton2.style.visibility = "visible";
+
 	game.innerHTML = `
 	<p>The man's eyebrows shoot up, and he gives a surprised bark of a laugh. "Really?" He's grinning.</p>
 
@@ -113,6 +126,10 @@ function tellMe() {
 }
 
 function reveal() {
+	revealButton1.remove();
+	revealButton2.remove();
+	noOneButton2.remove();
+
 	game.innerHTML = `
 	<p>The man does not respond. Instead, he pulls out a tablet. Hits play on a video.</p>
 
@@ -135,7 +152,9 @@ function reveal() {
 }
 
 function myType() {
-	game.innerHTML() = `
+	typeButton.remove();
+
+	game.innerHTML = `
 	<p>The man crosses his arms over his chest. "I've dealt with a lot of you before. Acting confused. Saying they don't remember what happened." His smirk widens. "Insisting they're the wrong person."</p>
 
 	<p>"Maybe there's truth to those claims."</p>
@@ -151,6 +170,9 @@ function myType() {
 }
 
 function getShot() {
+	getShotButton.remove();
+	tellMeButton.remove();
+
 	game.innerHTML = `
 	<p>The man does not respond. His glare hardens into ice. It's almost like the room itself has gotten colder.</p>
 
@@ -196,6 +218,8 @@ function getShot() {
 // While player doesn't have a name, make the name input visible.
 // When player has acceptable name, make name input invisible for rest of game.
 // When Start is clicked, save the text input as the player's name (username).
+
+
 function setUsername() {
 	if (nameInput.value == "") {
 		nameInput.placeholder = "Enter a valid name";
@@ -204,17 +228,19 @@ function setUsername() {
 		event.preventDefault();
 		startGame();
 	}
-}
+};
+
+
 
 startButton.addEventListener("click", setUsername);
-
-/*
 askButton.addEventListener("click", ask);
-noOneButton.addEventListener("click", noOne);
+noOneButton1.addEventListener("click", noOne);
+noOneButton2.addEventListener("click", noOne);
 silentButton.addEventListener("click", silent);
-*/
+
 typeButton.addEventListener("click", myType);
 tellMeButton.addEventListener("click", tellMe);
 
-revealButton.addEventListener("click", reveal);
+revealButton1.addEventListener("click", reveal);
+revealButton2.addEventListener("click", reveal);
 getShotButton.addEventListener("click", getShot);
